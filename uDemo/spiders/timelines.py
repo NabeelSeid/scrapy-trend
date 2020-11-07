@@ -34,9 +34,8 @@ class TimelinesSpider(scrapy.Spider):
         d4 = [309, 401]
 
         d = d1
-
-        keywords = pd.read_excel(
-            '/home/ns/Desktop/timelines/Keywords Music.xlsx')['Band'][d[0]:d[1]]
+        #/home/ns/Desktop/timelines/Keywords Music.xlsx
+        keywords = pd.read_excel('Keywords Music.xlsx')['Band'][d[0]:d[1]]
 
         driver = response.meta['driver']
         driver.set_window_position(0, 0)
